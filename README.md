@@ -6,6 +6,8 @@ Um site no estilo da Wikipédia dedicado a filósofos, cientistas, artistas e l�
 
 ## Páginas
 
+O site fica inteiro dentro da pasta `docs/`.
+
 | Página | O que tem |
 | --- | --- |
 | `index.html` | Pensamento do dia (muda a cada dia) e mural com mais de cem pensamentos, filtráveis por tema |
@@ -28,38 +30,40 @@ Personalidades incluídas: Lao-Tsé, Buda, Confúcio, Sócrates, Platão, Arist�
 
 ## Como ver no computador
 
-É um site estático (HTML, CSS e JavaScript puros, sem dependências). Basta abrir o `index.html` no navegador ou, para simular um servidor:
+É um site estático (HTML, CSS e JavaScript puros, sem dependências). Basta abrir o `docs/index.html` no navegador ou, para simular um servidor:
 
 ```bash
-python3 -m http.server 8000
+python3 -m http.server 8000 --directory docs
 # depois abra http://localhost:8000
 ```
 
 ## Como publicar no GitHub Pages
 
 1. No GitHub, vá em **Settings → Pages**.
-2. Em **Source**, escolha **Deploy from a branch**, selecione a branch e a pasta `/ (root)`.
+2. Em **Source**, escolha **Deploy from a branch**, selecione a branch `main` e a pasta `/docs`.
 3. Salve. Em alguns minutos o site estará no endereço indicado pelo GitHub.
 
 ## Como acrescentar uma personalidade
 
-1. Copie um arquivo de `personalidades/` (por exemplo, `socrates.html`) com um novo nome, como `hipatia.html`.
+1. Copie um arquivo de `docs/personalidades/` (por exemplo, `socrates.html`) com um novo nome, como `hipatia.html`.
 2. Edite o título, a ficha (`<aside class="infobox">`), o texto e as citações. O índice "Conteúdo" é montado sozinho a partir dos títulos `<h2>` e `<h3>`.
 3. No `<span class="retrato retrato-grande" ...>`, ajuste `data-wiki` com o título do artigo na Wikipédia em inglês (é de lá que vem o retrato).
-4. Registre a pessoa na lista `pessoas` de `js/dados.js`, usando como `id` o nome do arquivo sem `.html`. Assim ela aparece na busca, na página de personalidades, no "Aleatório" e no quadro de navegação.
+4. Registre a pessoa na lista `pessoas` de `docs/js/dados.js`, usando como `id` o nome do arquivo sem `.html`. Assim ela aparece na busca, na página de personalidades, no "Aleatório" e no quadro de navegação.
 5. Para levar frases à página inicial, acrescente-as à lista `pensamentos` do mesmo arquivo.
 
 ## Estrutura
 
 ```
-index.html              página inicial (pensamentos)
-personalidades.html     lista de personalidades
-sobre.html              sobre o site
-personalidades/         um artigo por personalidade
-css/estilo.css          todo o visual, com tema claro e escuro
-js/dados.js             registro de personalidades e pensamentos
-js/site.js              busca, tema, retratos, índice e navegação (todas as páginas)
-js/inicio.js            pensamento do dia e mural da página inicial
-js/personalidades.js    filtros da página de personalidades
-img/favicon.svg         ícone (a coruja, símbolo da sabedoria)
+docs/
+  index.html              página inicial (pensamentos)
+  personalidades.html     lista de personalidades
+  sobre.html              sobre o site
+  personalidades/         um artigo por personalidade
+  css/estilo.css          todo o visual, com tema claro e escuro
+  js/dados.js             registro de personalidades e pensamentos
+  js/site.js              busca, tema, retratos, índice e navegação (todas as páginas)
+  js/inicio.js            pensamento do dia e mural da página inicial
+  js/personalidades.js    filtros da página de personalidades
+  img/favicon.svg         ícone (a coruja, símbolo da sabedoria)
+  .nojekyll               faz o GitHub Pages publicar os arquivos como estão
 ```
