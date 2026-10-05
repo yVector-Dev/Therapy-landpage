@@ -1,0 +1,29 @@
+{
+  "name": "Pensapédia",
+  "short_name": "Pensapédia",
+  "description": "Grandes pensamentos e frases de filósofos, cientistas, artistas e líderes, com a fonte verificada de cada citação.",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f2eb",
+  "theme_color": "#fffdf9",
+  "icons": [
+    {
+      "src": "assets/img/icone-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/icone-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/icone-mascaravel-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

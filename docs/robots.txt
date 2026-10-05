@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yvector-dev.github.io/Therapy-landpage/sitemap.xml
