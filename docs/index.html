@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pensapédia — grandes pensamentos e dizeres</title>
+  <meta name="description" content="Grandes pensamentos e dizeres de filósofos, cientistas, artistas e líderes que marcaram a história da humanidade.">
+  <meta property="og:site_name" content="Pensapédia">
+  <meta property="og:title" content="Pensapédia — grandes pensamentos e dizeres">
+  <meta property="og:description" content="Grandes pensamentos e dizeres de filósofos, cientistas, artistas e líderes que marcaram a história da humanidade.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="css/estilo.css">
+  <script>try{var t=localStorage.getItem('pensapedia:tema');if(t==='claro'||t==='escuro')document.documentElement.dataset.tema=t}catch(e){}</script>
+</head>
+<body data-raiz="" data-pagina="inicio">
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo" id="topo">
+    <div class="topo-interno">
+      <a class="marca" href="index.html">
+        <svg class="coruja" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <path class="coruja-corpo" d="M11 15.5 9.6 5.8l7.6 5.6Q20.4 10 24 10t6.8 1.4l7.6-5.6-1.4 9.7q3 4.4 3 10.5C40 36.4 32.8 43 24 43S8 36.4 8 26q0-6.1 3-10.5Z"/>
+          <circle class="coruja-olho" cx="17.6" cy="22" r="6.2"/>
+          <circle class="coruja-olho" cx="30.4" cy="22" r="6.2"/>
+          <circle class="coruja-pupila" cx="17.6" cy="22" r="2.7"/>
+          <circle class="coruja-pupila" cx="30.4" cy="22" r="2.7"/>
+          <path class="coruja-bico" d="m24 26.4 2.4 3.4L24 32.6l-2.4-2.8Z"/>
+          <path class="coruja-penas" d="M17.5 36.2q3.25 2.2 6.5 0 3.25 2.2 6.5 0"/>
+        </svg>
+        <span class="marca-texto">
+          <span class="marca-nome">Pensapédia</span>
+          <span class="marca-slogan">A enciclopédia dos grandes nomes</span>
+        </span>
+      </a>
+
+      <form class="busca" role="search" action="personalidades.html" method="get">
+        <label class="visualmente-oculto" for="busca-campo">Pesquisar na Pensapédia</label>
+        <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg>
+        <input id="busca-campo" name="q" type="search" placeholder="Pesquisar personalidades…" autocomplete="off"
+               role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="busca-sugestoes">
+        <ul id="busca-sugestoes" class="busca-sugestoes" role="listbox" aria-label="Sugestões" hidden></ul>
+      </form>
+
+      <nav class="nav-principal" aria-label="Navegação principal">
+        <a href="index.html" aria-current="page">Início</a>
+        <a href="personalidades.html">Personalidades</a>
+        <a href="personalidades.html" data-aleatorio>Aleatório</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+
+      <button class="botao-tema" type="button" aria-label="Alternar entre tema claro e escuro" title="Alternar tema">
+        <svg class="icone icone-lua" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/></svg><svg class="icone icone-sol" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo" class="inicio" tabindex="-1">
+    <h1 class="visualmente-oculto">Pensapédia — grandes pensamentos e dizeres</h1>
+
+    <section class="destaque" aria-labelledby="destaque-rotulo">
+      <p class="rotulo" id="destaque-rotulo"><span>Pensamento do dia <span aria-hidden="true">·</span> <time data-hoje></time></span></p>
+      <figure class="destaque-citacao" data-destaque aria-live="polite">
+        <blockquote><p>Carregando…</p></blockquote>
+      </figure>
+      <div class="destaque-acoes">
+        <button class="botao" type="button" data-outro>
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 11a8 8 0 1 0-2.3 5.7"/><path d="M20 4.5V11h-6.5"/></svg>
+          Outro pensamento
+        </button>
+        <button class="botao botao-discreto" type="button" data-copiar-destaque>
+          <svg class="icone" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="8.5" y="8.5" width="11" height="11" rx="2"/><path d="M15.5 8.5V6.5a2 2 0 0 0-2-2h-7a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h2"/></svg>
+          Copiar
+        </button>
+      </div>
+    </section>
+
+    <section class="mural" aria-labelledby="mural-titulo">
+      <header class="mural-cabecalho">
+        <h2 id="mural-titulo">Grandes pensamentos e dizeres</h2>
+        <p class="mural-sub" data-contagem></p>
+      </header>
+      <div class="filtros" role="group" aria-label="Filtrar por tema" data-temas></div>
+      <div class="mural-grade" data-mural></div>
+      <div class="mural-mais">
+        <button class="botao botao-discreto" type="button" data-mais hidden>Mostrar mais pensamentos</button>
+      </div>
+      <noscript><p class="aviso">Ative o JavaScript para ver os pensamentos.</p></noscript>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="rodape-interno">
+      <a class="rodape-marca" href="index.html"><svg class="coruja" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <path class="coruja-corpo" d="M11 15.5 9.6 5.8l7.6 5.6Q20.4 10 24 10t6.8 1.4l7.6-5.6-1.4 9.7q3 4.4 3 10.5C40 36.4 32.8 43 24 43S8 36.4 8 26q0-6.1 3-10.5Z"/>
+      <circle class="coruja-olho" cx="17.6" cy="22" r="6.2"/>
+      <circle class="coruja-olho" cx="30.4" cy="22" r="6.2"/>
+      <circle class="coruja-pupila" cx="17.6" cy="22" r="2.7"/>
+      <circle class="coruja-pupila" cx="30.4" cy="22" r="2.7"/>
+      <path class="coruja-bico" d="m24 26.4 2.4 3.4L24 32.6l-2.4-2.8Z"/>
+      <path class="coruja-penas" d="M17.5 36.2q3.25 2.2 6.5 0 3.25 2.2 6.5 0"/>
+    </svg> Pensapédia</a>
+      <nav class="rodape-nav" aria-label="Rodapé">
+        <a href="index.html">Início</a>
+        <a href="personalidades.html">Personalidades</a>
+        <a href="personalidades.html" data-aleatorio>Artigo aleatório</a>
+        <a href="sobre.html">Sobre</a>
+      </nav>
+      <p class="rodape-nota">Textos de caráter educativo escritos para a Pensapédia. Os retratos são carregados da Wikimedia Commons por meio da Wikipédia.</p>
+    </div>
+  </footer>
+
+  <script src="js/dados.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>
